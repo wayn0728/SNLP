@@ -669,7 +669,7 @@ public class PCFGParserTester {
 	    String basePath = ".";
 	    boolean verbose = false;
 	    String testMode = "validate";
-	    int maxTrainLength =1000;
+	    int maxTrainLength =40;
 	    int maxTestLength = 40;
 
 	    // Update defaults using command line specifications
