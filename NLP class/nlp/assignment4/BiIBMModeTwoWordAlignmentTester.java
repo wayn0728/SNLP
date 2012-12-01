@@ -443,6 +443,7 @@ public class BiIBMModeTwoWordAlignmentTester {
 			// TODO judge converge
 			double delta = 1000;
 			while (true) {
+				System.out.println(Runtime.getRuntime().freeMemory()/(1024*1024));
 				if (count > 10)
 					break;
 				System.out.println(count++);

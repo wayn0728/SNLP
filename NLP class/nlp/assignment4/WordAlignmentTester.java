@@ -227,7 +227,9 @@ public class WordAlignmentTester {
 						EnglishFrenchCounter.incrementCount(pair, 1.0);
 					}
 				}
+
 			}
+
 		}
 
 		public Alignment alignSentencePair(SentencePair sentencePair) {
@@ -322,8 +324,8 @@ public class WordAlignmentTester {
 		System.out.println("AER: "
 				+ (1.0 - (proposedSureCount + proposedPossibleCount)
 						/ (double) (sureCount + proposedCount)));
-		System.out.println("proposedSureCount: "+proposedSureCount);
-		System.out.println("proposedPossibleCount: "+proposedPossibleCount);
+		System.out.println("proposedSureCount: " + proposedSureCount);
+		System.out.println("proposedPossibleCount: " + proposedPossibleCount);
 	}
 
 	// BELOW HERE IS IO CODE

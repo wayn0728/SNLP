@@ -1,6 +1,7 @@
 package nlp.assignment5;
 
 
+import java.io.File;
 import java.util.*;
 
 import nlp.io.PennTreebankReader;
@@ -98,7 +99,7 @@ public class PCFGParserTester {
       return bestTag;
     }
 
-    public BaselineParser(List<Tree<String>> trainTrees) {
+		public BaselineParser(List<Tree<String>> trainTrees) {
 
       System.out.print("Annotating / binarizing training trees ... ");
       List<Tree<String>> annotatedTrainTrees = annotateTrees(trainTrees);
@@ -661,7 +662,9 @@ public class PCFGParserTester {
     }
     return normalizedTreeList;
   }
-  public static void main(String[] args) {
+
+	public static void main(String[] args) {
+	  
 	    // Parse command line flags and arguments
 	    Map<String, String> argMap = CommandLineUtils.simpleCommandLineParser(args);
 
@@ -669,7 +672,7 @@ public class PCFGParserTester {
 	    String basePath = ".";
 	    boolean verbose = false;
 	    String testMode = "validate";
-	    int maxTrainLength =40;
+	    int maxTrainLength =10000;
 	    int maxTestLength = 40;
 
 	    // Update defaults using command line specifications
@@ -700,6 +703,7 @@ public class PCFGParserTester {
 
 	    System.out.print("Loading training trees (sections 2-21) ... ");
 	    List<Tree<String>> trainTrees = readTrees(basePath, 200, 2199, maxTrainLength);
+	    System.out.println(basePath);
 	    System.out.println("done. (" + trainTrees.size() + " trees)");
 	    List<Tree<String>> testTrees = null;
 	    if (testMode.equalsIgnoreCase("validate")) {
